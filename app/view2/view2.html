@@ -1,0 +1,24 @@
+<div style="background-color: #000000;background-image: linear-gradient(315deg, #000000 0%, #414141 74%); ">
+	<h2 class="menu text-center" style="color: white">
+	Please Select Your Batch
+	</h2>
+	<div class="container">
+
+		<div class="row" id="card-container">
+			<div class="col-sm-4 col-md-4 pb-2" ng-repeat="batch in batches">
+				<div class="card " style= "width:20rem; height: 25rem" >
+					<img class="card-img-bottom" width ="286px" height="180px" src= {{batch.batchImage}} alt= {{batch.batchName}}>
+					<div class="card-body">
+						<h3 class="card-title">{{batch.batchName}}</h3>
+						<p class="card-text"><span class="font-weight-bold">Batch Days :</span>{{batch.batchDays}}</p>
+						<p class="card-text"> <span class="font-weight-bold">Batch Timing :</span>{{batch.batchTime1}}</p>
+						<br/>
+						<div class="text-center">
+							<button  ng-click ="setBatchId(batch.$id)" class="btn btn-primary stretched-link text-center">Select</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

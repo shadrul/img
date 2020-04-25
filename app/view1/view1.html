@@ -1,0 +1,68 @@
+<div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">
+        <div class="wrapper wrapper--w780">
+            <div class="card card-3">
+                <div class="card-heading"></div>
+                <div class="card-body">
+                    <h2 class="title">Student Info</h2>
+                    <form method="POST">
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="Name" name="name" ng-model = "user.name">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="email" placeholder="Email" name="email" ng-model = "user.email">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="password" placeholder="Password" name="password" ng-model = "password">
+                        </div>
+                        <div class="input-group">
+                            <div class="rs-select2 js-select-simple select--no-search">
+                               <select ng-model ="user.college"  ng-options="x for x in colleges">
+								  
+								</select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <div class="rs-select2 js-select-simple select--no-search">
+                               <select ng-model ="user.branch"  ng-options="x for x in branches">
+								  
+								</select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <div class="rs-select2 js-select-simple select--no-search">
+                               <select ng-model ="user.sem"  ng-options="x for x in semesters">
+								  
+								</select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                   <!--      <div class="input-group">
+                            <div class="rs-select2 js-select-simple select--no-search">
+                               <select ng-model ="user.batch"  ng-options="x for x in batches">
+								  
+								</select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div> -->
+                        <div class="p-t-10">
+                            <button class="btn btn--pill btn--green" type="submit" ng-click ="signIn()">Sign In</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div>{{rec.branch}}</div>
+
+    <div>
+    	<table>
+    		<tr ng-repeat = "user in list">
+    			<td>{{user.name}}</td>
+    			
+    		</tr>
+    	</table>
+    </div>
